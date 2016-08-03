@@ -3,8 +3,8 @@ from telegram.ext import CommandHandler, MessageHandler
 from telegram import ParseMode
 import os
 
-import modules.DataBase as DataBase
-import modules.SuperUser as SuperUser
+import plugin.DataBase as DataBase
+import plugin.SuperUser as SuperUser
 
 def extract_keys(message):
 	text = message.text

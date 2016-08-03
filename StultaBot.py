@@ -6,14 +6,14 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 def add_commands(dp):
-	import modules.Base as Base
+	import plugin.Base as Base
 	dp.add_handler(CommandHandler("start", Base.start))
 	dp.add_handler(CommandHandler("help", Base.help))
 	dp.add_handler(CommandHandler("getuser", Base.get_user))
 	dp.add_handler(CommandHandler("getchat", Base.get_chat))
-	import modules.Key as Key
+	import plugin.Key as Key
 	Key.main(dp)
-	import modules.Testing as Testing
+	import plugin.Testing as Testing
 	Testing.main(dp)
 
 def error(bot, update, error):
